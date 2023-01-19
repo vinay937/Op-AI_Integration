@@ -75,17 +75,11 @@ const handleSubmit = async (e) => {
 
   const data = new FormData(form)
   // user's chat stripe
-
-  if (data.get('prompt') === "Vishal" || "vishal" ||"vishal kumar" || "vishal kumar"){
-    chatContainer.innerHTML += chatStripe(false, 'he is a piece of shit');
-
-  } else {
   chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
 
   form.reset();
-  }
-  //bot's chatstripe
 
+  //bot's chatstripe
   const uniqueId = generateUniqueId();
   chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
 
